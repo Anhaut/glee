@@ -2,4 +2,73 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+.header {
+    padding: 50px 74px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__list-item+.menu__list-item {
+        padding-left: 35px;
+    }
+    &__list-link {
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: #436372;
+    }
+}
+
+.nav-user {
+    display: flex;
+    &__menu {
+        margin-left: 20px;
+        background-color: #a3bbc8;
+        padding: 12px;
+        border-radius: 50%;
+    }
+    &__seach {
+        background-color: #edf1f4;
+        border-radius: 50%;
+        padding: 15px;
+    }
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 178px;
+    margin-left: 20px;
+    background-color: #fcd7b6;
+    border-radius: 20px;
+    &__link {
+        position: relative;
+    }
+    &__nam {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        top: -8px;
+        right: -8px;
+        color: $default;
+        font-size: 10px;
+        line-height: 16px;
+        padding-left: 5px;
+    }
+    &__boredr {
+        color: #fde7d3;
+        font-size: 32px;
+    }
+}
+
 @import 'media';
