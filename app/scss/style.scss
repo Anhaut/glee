@@ -1,10 +1,11 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 .header {
-    padding: 50px 74px 0;
     &__inner {
+        padding: 50px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -47,7 +48,7 @@
     align-items: center;
     width: 178px;
     margin-left: 20px;
-    background-color: #fcd7b6;
+    background-color: $accent;
     border-radius: 20px;
     &__link {
         position: relative;
@@ -160,6 +161,72 @@
     }
     &__menu-link {
         color: $footer;
+    }
+}
+
+.top-slider {
+    .wrapper {
+        background-color: $accent;
+        padding-top: 97px;
+    }
+    &__title {
+        font-size: 72px;
+        line-height: 70px;
+        @extend %rubik-500;
+        max-width: 415px;
+        margin-bottom: 40px;
+    }
+    &__text {
+        max-width: 389px;
+        color: #436372;
+        font-size: 18px;
+        line-height: 30px;
+        @extend %rubik-400;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        background-color: #a3bbc8;
+        padding: 24px 17px 24px 25px;
+        max-width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        font-size: 15px;
+        line-height: 12px;
+        @extend %rubik-500;
+        color: #fff;
+    }
+    &__item {
+        display: flex !important;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+        li {
+            button {
+                border: none;
+                background-color: #fde3cc;
+                border-radius: 50%;
+                color: $default;
+                font-size: 11px;
+                line-height: 11px;
+                @extend %rubik-500;
+                width: 30px;
+                height: 30px;
+            }
+            &.slick-active {
+                button {
+                    background-color: #fff;
+                }
+            }
+        }
+        li+li {
+            margin-left: 12px;
+        }
     }
 }
 
