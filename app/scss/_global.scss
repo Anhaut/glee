@@ -34,3 +34,29 @@ body {
     color: $footer;
     @extend %rubik-400;
 }
+
+.title {
+    font-size: 36px;
+    line-height: 42px;
+    color: $title;
+    @extend %dmsans-700;
+}
+
+.menu {
+    font-size: 16px;
+    line-height: 22px;
+    color: $menu;
+    @extend %dmsans-700;
+}
+
+.menu--active {
+    font-size: 16px;
+    line-height: 22px;
+    color: $title;
+    @extend %dmsans-700;
+}
+
+.menu:hover {
+    color: $title;
+    transition: all 0.3s;
+}
