@@ -60,3 +60,34 @@ body {
     color: $title;
     transition: all 0.3s;
 }
+
+.breadcrubms {
+    display: flex;
+    justify-content: center;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding-right: 20px;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: '/';
+            color: #979ba0;
+            height: 14px;
+            right: 8px;
+        }
+        &:last-child {
+            padding-right: 0;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        color: #979ba0;
+        font-size: 14px;
+        line-height: 24px;
+        @extend %rubik-400;
+    }
+}
