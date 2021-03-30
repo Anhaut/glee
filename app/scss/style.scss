@@ -911,10 +911,6 @@
             box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
             background-color: #fbfbfb;
             position: relative;
-            // &:nth-child(1) img,
-            // &:nth-child(2) img {
-            //     margin-bottom: 100px;
-            // }
         }
         &__block {
             display: flex;
@@ -949,6 +945,34 @@
         }
         &__photo {
             margin-bottom: 100px;
+        }
+    }
+    
+    .terms {
+        padding-top: 100px;
+        &__title {
+            font-size: 24px;
+            line-height: 40px;
+            color: $basic;
+            @extend %rubik-500;
+            margin-bottom: 15px;
+        }
+        &__list {
+            margin-bottom: 40px;
+        }
+        &__items {
+            font-size: 16px;
+            line-height: 30px;
+            color: $basic;
+            @extend %rubik-400;
+            margin-bottom: 30px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 30px;
+            color: $basic;
+            @extend %rubik-400;
+            margin-bottom: 60px;
         }
     }
     
