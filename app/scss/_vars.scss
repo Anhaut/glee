@@ -3,7 +3,6 @@
     $accent: #fcd7b6;
     $menu: #8b8b8b;
     $title: #191919;
-    $basic: #243f4d;
     %dmsans-400 {
         font-family: 'DMSans-Regular', sans-serif;
         font-weight: 400;
@@ -37,6 +36,14 @@
     %myriadpro-400 {
         font-family: 'MyriadPro-Regular', sans-serif;
         font-weight: 400;
+    }
+    
+    %checkboh-hidden {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
     }
     
     @function max($numbers...) {

@@ -555,8 +555,8 @@
                 content: '';
                 position: absolute;
                 background-image: url(../images/icons/arrow-blog.svg);
-                width: 6px;
-                height: 11px;
+                width: 5px;
+                height: 10px;
                 right: 0;
                 bottom: 6px;
             }
@@ -953,7 +953,7 @@
         &__title {
             font-size: 24px;
             line-height: 40px;
-            color: $basic;
+            color: $default;
             @extend %rubik-500;
             margin-bottom: 15px;
         }
@@ -963,17 +963,228 @@
         &__items {
             font-size: 16px;
             line-height: 30px;
-            color: $basic;
+            color: $default;
             @extend %rubik-400;
             margin-bottom: 30px;
         }
         &__text {
             font-size: 16px;
             line-height: 30px;
-            color: $basic;
+            color: $default;
             @extend %rubik-400;
             margin-bottom: 60px;
         }
+    }
+    
+    .catalog {
+        padding: 100px 0 115px;
+        &__inner {
+            display: flex;
+        }
+        &__filters {
+            width: 278px;
+            margin-right: 20px;
+        }
+    }
+    
+    .filter {
+        &__title {
+            color: $default;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: uppercase;
+            @extend %dmsans-700;
+            margin-bottom: 30px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                background-color: rgb(163, 187, 200);
+                width: 39px;
+                height: 3px;
+                top: 10px;
+                right: 30px;
+            }
+        }
+    }
+    
+    .catalog-category {
+        margin-bottom: 45px;
+        &__items {
+            padding: 15px;
+            color: $default;
+            font-size: 16px;
+            line-height: 20px;
+            @extend %rubik-400;
+            border-radius: 5px;
+            position: relative;
+            transition: all .3s;
+            cursor: pointer;
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(../images/icons/arrow-blog.svg);
+                width: 5px;
+                height: 10px;
+                right: 20px;
+                top: 21px;
+            }
+            &:hover {
+                background-color: #edf1f4;
+            }
+        }
+        &__items--active {
+            background-color: #edf1f4;
+        }
+        &__link {
+            color: $default;
+        }
+    }
+    
+    .catalog-price {
+        margin-bottom: 80px;
+        &__price-filter {
+            display: flex;
+            justify-content: space-between;
+            span {
+                font-size: 14px;
+                @extend %rubik-400;
+                position: relative;
+            }
+        }
+        &__from {
+            padding-left: 9px;
+            &::before {
+                position: absolute;
+                content: '$';
+                left: 0;
+            }
+        }
+        &__to {
+            &::before {
+                position: absolute;
+                content: '$';
+                left: -9px;
+            }
+        }
+    }
+    
+    .irs--flat .irs-min,
+    .irs--flat .irs-max {
+        display: none;
+        top: 0;
+        padding: 1px 3px;
+        color: $default;
+        font-size: 14px;
+        background-color: #fff;
+        @extend %rubik-400;
+    }
+    
+    .irs--flat .irs-line {
+        top: 25px;
+        height: 3px;
+        background-color: #edf1f4;
+        border-radius: 0;
+    }
+    
+    .irs--flat .irs-bar {
+        top: 25px;
+        height: 4px;
+        background-color: #a3bbc8;
+    }
+    
+    .irs--flat .irs-handle>i:first-child {
+        top: -2px;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #a3bbc8;
+    }
+    
+    .irs--flat .irs-handle.state_hover>i:first-child,
+    .irs--flat .irs-handle:hover>i:first-child {
+        background-color: #a3bbc8;
+    }
+    
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single {
+        display: none;
+    }
+    
+    .irs--flat .irs-from:before,
+    .irs--flat .irs-to:before,
+    .irs--flat .irs-single:before {
+        display: none
+    }
+    
+    .catalog-brand {
+        margin-bottom: 50px;
+        &__label {
+            color: $default;
+            font-size: 16px;
+            line-height: 20px;
+            @extend %rubik-400;
+            cursor: pointer;
+        }
+        &__input {
+            @extend %checkboh-hidden;
+            &:checked+.catalog-brand__checkbox {
+                background-color: #edf1f4;
+                border-radius: 5px;
+                .catalog-brand__number {
+                    color: $default;
+                }
+            }
+        }
+        &__checkbox {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        &__number {
+            color: #b3b3b3;
+        }
+    }
+    
+    .catalog-recent {
+        &__item {
+            display: flex;
+        }
+        &__item+.catalog-recent__item {
+            margin-top: 23px;
+        }
+        &__link {
+            width: 70px;
+            height: 70px;
+            border: 3px solid #f2f2f2;
+            margin-right: 18px;
+        }
+        &__img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__descr {
+            margin-top: 5px;
+        }
+        &__descr-title {
+            font-size: 14px;
+            line-height: 15px;
+            color: #333333;
+            @extend %rubik-400;
+            margin-bottom: 13px;
+        }
+        &__price {
+            font-size: 15px;
+            line-height: 15px;
+            color: #333333;
+            @extend %rubik-400;
+        }
+    }
+    
+    .jq-ry-container {
+        padding: 0;
+        margin-bottom: 3px;
     }
     
     @import 'media';
