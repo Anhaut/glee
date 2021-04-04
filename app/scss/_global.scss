@@ -91,3 +91,28 @@ body {
         @extend %rubik-400;
     }
 }
+
+.pagination {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        margin-right: 16px;
+    }
+    &__next,
+    &__link {
+        @extend %rubik-400;
+        border: 1px solid #a3bbc8;
+        padding: 15px 20px;
+        line-height: 16px;
+        color: $default;
+    }
+    &__link--active {
+        background-color: #a3bbc8;
+        color: #fff;
+    }
+}

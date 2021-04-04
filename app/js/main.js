@@ -1,4 +1,20 @@
 $(function() {
+
+    $('.catalog-content__filter-btn').on('click', function() {
+        $('.catalog-content__filter-btn').removeClass('catalog-content__filter-btn--active');
+        $(this).addClass('catalog-content__filter-btn--active');
+
+    });
+
+    $('.button-list').on('click', function() {
+        $('.products-item').addClass('products-item--list');
+    });
+
+    $('.button-grid').on('click', function() {
+        $('.products-item').removeClass('products-item--list');
+    });
+
+
     $('.top-slider__inner').slick({
         dots: true,
         arrows: false,
@@ -24,6 +40,14 @@ $(function() {
         starWidth: "10px",
         normalFill: "#d6d6d6",
         ratedFill: "#ffcc00",
+        spacing: "7px",
+    });
+
+    $(".products-item__star").rateYo({
+        starWidth: "20px",
+        normalFill: "#d6d6d6",
+        ratedFill: "#ffcc00",
+        spacing: "14px",
     });
 
 
