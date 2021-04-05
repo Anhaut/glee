@@ -432,20 +432,6 @@
                 @extend %rubik-400;
                 margin-bottom: 30px;
             }
-            .products-item__btn {
-                border: none;
-                background-color: #a3bbc8;
-                border-radius: 5px;
-                color: #fff;
-                cursor: pointer;
-                width: 206px;
-                text-transform: uppercase;
-                padding: 18px 0;
-                @extend %rubik-400;
-                font-size: 15px;
-                line-height: 15px;
-                outline: none;
-            }
         }
         &__content-box {
             display: none;
@@ -1291,6 +1277,177 @@
                 }
             }
         }
+    }
+    
+    .product {
+        padding: 115px 0 120px;
+    }
+    
+    .product-item {
+        &__inner {
+            display: flex;
+        }
+        &__slide {
+            width: 550px;
+            margin-right: 65px;
+        }
+        &__content {
+            width: 545px;
+        }
+        &__content {
+            padding: 30px 0 35px;
+        }
+        &__title {
+            color: #333333;
+            font-size: 40px;
+            line-height: 40px;
+            @extend %rubik-400;
+            margin-bottom: 25px;
+        }
+        .products-item__star {
+            margin-bottom: 35px;
+        }
+        &__price {
+            color: #333333;
+            font-size: 30px;
+            line-height: 30px;
+            @extend %rubik-400;
+            margin-bottom: 35px;
+        }
+        &__text {
+            color: $default;
+            font-size: 16px;
+            line-height: 30px;
+            @extend %rubik-400;
+            margin-bottom: 15px;
+        }
+        &__num {
+            padding-left: 50px;
+            margin-right: 25px;
+        }
+    }
+    
+    .product-info {
+        margin-top: 55px;
+        color: $default;
+        @extend %rubik-400;
+        line-height: 16px;
+        a {
+            color: $default;
+        }
+        &__item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        &__title {
+            margin-right: 5px;
+        }
+    }
+    
+    .product-slide {
+        display: flex;
+        .slick-vertical .slick-slide {
+            height: 160px;
+            margin-bottom: 25px;
+        }
+        &__thumb {
+            width: 135px;
+            margin-right: 25px;
+        }
+        &__thumb-item {
+            width: 135px;
+            height: 160px;
+            margin-bottom: 25px;
+            border: 1px solid #f2f2f2;
+            cursor: pointer;
+            img {
+                width: 135px;
+                height: 158px;
+                object-fit: cover;
+            }
+        }
+        &__big {
+            width: 385px;
+            border: 1px solid #f2f2f2;
+            height: 530px;
+            img {
+                width: 385px;
+                height: 528px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    .jq-number__field {
+        border-radius: 0;
+        border: 1px solid #a3bbc8;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .jq-number__field input {
+        color: #333333;
+        font-size: 15px;
+        text-align: center;
+        padding: 17px 0;
+        @extend %rubik-400;
+    }
+    
+    .jq-number__spin {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 0;
+        border: 1px solid #a3bbc8;
+        background-image: none;
+    }
+    
+    .jq-number__spin:hover {
+        background-image: none;
+    }
+    
+    .jq-number__spin.minus {
+        top: 0;
+        left: 0;
+        border-right: none;
+    }
+    
+    .jq-number__spin.minus:after {
+        border: none;
+        top: 24px;
+        left: 21px;
+        width: 9px;
+        height: 1px;
+        background: #333333;
+    }
+    
+    .jq-number__spin.plus {
+        top: 0;
+        right: -14px;
+        border-left: none;
+    }
+    
+    .jq-number__spin.plus:after {
+        border: none;
+        top: 24px;
+        left: 21px;
+        width: 9px;
+        height: 1px;
+        background: #333333;
+    }
+    
+    .jq-number__spin:before {
+        content: '';
+        position: absolute;
+    }
+    
+    .jq-number__spin.plus:before {
+        width: 1px;
+        height: 9px;
+        background: #333333;
+        left: 25px;
+        top: 20px;
+        border: none;
     }
     
     @import 'media';

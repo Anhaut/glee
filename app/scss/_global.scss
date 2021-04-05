@@ -116,3 +116,18 @@ body {
         color: #fff;
     }
 }
+
+.cart-btn {
+    border: none;
+    background-color: #a3bbc8;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 206px;
+    text-transform: uppercase;
+    padding: 18px 0;
+    @extend %rubik-400;
+    font-size: 15px;
+    line-height: 15px;
+    outline: none;
+}
