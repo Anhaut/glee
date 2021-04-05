@@ -1284,6 +1284,7 @@
     }
     
     .product-item {
+        margin-bottom: 80px;
         &__inner {
             display: flex;
         }
@@ -1448,6 +1449,95 @@
         left: 25px;
         top: 20px;
         border: none;
+    }
+    
+    .product-tabs {
+        &__top {
+            margin-bottom: 35px;
+            @extend %rubik-500;
+            font-size: 18px;
+            margin-left: 165px;
+        }
+        &__top-item {
+            display: inline-block;
+            padding: 17px 0 21px;
+            color: $default;
+            width: 240px;
+            background-color: #edf1f4;
+            border-radius: 5px;
+            text-align: center;
+            &+.product-tabs__top-item {
+                margin-left: 13px;
+            }
+        }
+        &__top-item--active {
+            background-color: #a3bbc8;
+            color: #fff;
+        }
+        &__content-item {
+            display: none;
+            &.product-tabs__content-item--active {
+                display: block;
+            }
+        }
+        &__item-text {
+            @extend %rubik-400;
+        }
+    }
+    
+    .related {
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                color: $default;
+            }
+            margin-bottom: 60px;
+        }
+        &__slider {
+            box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        }
+        &__btn-next {
+            margin-left: 20px;
+        }
+        &__btn-prev,
+        &__btn-next {
+            width: 48px;
+            height: 48px;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 2px solid #edf1f4;
+            outline: none;
+            &:active {
+                border: 2px solid #a3bbc8;
+            }
+            position: relative;
+        }
+        &__btn-prev {
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/prew-arrow.svg');
+                width: 22px;
+                height: 9px;
+                top: 17px;
+                left: 11px;
+            }
+        }
+        &__btn-next {
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/next-arrow.svg');
+                width: 22px;
+                height: 9px;
+                top: 17px;
+                left: 11px;
+            }
+        }
+        &__btn-next--active {
+            border: 2px solid #a3bbc8;
+        }
     }
     
     @import 'media';
