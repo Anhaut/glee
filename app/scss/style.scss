@@ -1540,4 +1540,175 @@
         }
     }
     
+    .article {
+        padding: 120px 0 115px;
+        &__inner {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        &__content {
+            margin-bottom: 50px;
+        }
+        &__item {
+            max-width: 835px;
+            margin-right: 60px;
+            img {
+                object-fit: cover;
+            }
+            margin-bottom: 50px;
+        }
+        &__item-info {
+            max-width: 275px;
+            background-color: #a3bbc8;
+            color: #fff;
+            font-size: 12px;
+            line-height: 12px;
+            @extend %rubik-400;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 30px 0 30px;
+            position: relative;
+            top: -72px;
+        }
+        &__item-date {
+            margin-right: 46px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/calendar.svg');
+                top: 0;
+                left: -17px;
+                width: 11px;
+                height: 12px;
+            }
+        }
+        &__item-user {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/user-blog.svg');
+                top: 0;
+                left: -19px;
+                width: 11px;
+                height: 12px;
+            }
+        }
+        &__item-title {
+            font-size: 36px;
+            line-height: 36px;
+            color: #333333;
+            @extend %rubik-400;
+            position: relative;
+            top: -30px;
+        }
+        &__item-text {
+            line-height: 30px;
+            color: $default;
+            @extend %rubik-400;
+            margin-bottom: 30px;
+        }
+        &__item-link {
+            display: inline-block;
+            color: #a3bbc8;
+            @extend %myriadpro-400;
+            font-size: 15px;
+            line-height: 15px;
+            border: 1px solid #a3bbc8;
+            padding: 23px 0 22px 20px;
+            width: 180px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/arrow-article.svg');
+                width: 22px;
+                height: 9px;
+                top: 23px;
+                right: 18px;
+            }
+        }
+        &__aside {
+            width: 275px;
+        }
+    }
+    
+    .article-search {
+        margin-bottom: 55px;
+        &__form {
+            display: flex;
+        }
+        &__input {
+            border: 1px solid #edf1f4;
+            width: 222px;
+            height: 42px;
+            padding: 0 15px 0 5px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            outline: none;
+        }
+        &__btn {
+            border-radius: 5px;
+            background-color: #edf1f4;
+            border: none;
+            width: 48px;
+            height: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -2px;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    
+    .recent-posts {
+        &__item {
+            display: flex;
+            margin-bottom: 22px;
+        }
+        &__img-link {
+            display: block;
+            margin-right: 20px;
+        }
+        &__title-link {
+            display: inline-block;
+        }
+        &__img {
+            min-width: 71px;
+            height: 71px;
+            object-fit: cover;
+        }
+        &__title {
+            font-size: 14px;
+            line-height: 20px;
+            color: #333333;
+            @extend %rubik-400;
+        }
+        &__date {
+            font-size: 12px;
+            line-height: 12px;
+            color: #9a9a9a;
+            @extend %rubik-400;
+            text-transform: uppercase;
+            padding-left: 20px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                background-image: url('../images/icons/calendar.svg');
+                width: 12px;
+                height: 14px;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    
+    .article__pagination {
+        padding: 0;
+        justify-content: left;
+    }
+    
     @import 'media';
