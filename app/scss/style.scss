@@ -1990,4 +1990,126 @@
     }
 }
 
+.contact {
+    padding-top: 120px;
+    &__subtitle {
+        text-align: center;
+        display: block;
+        color: #a3bbc8;
+        font-size: 16px;
+        line-height: 20px;
+        @extend %poppins-700;
+        margin-bottom: 15px;
+    }
+    &__title {
+        text-align: center;
+        color: #436372;
+        font-size: 35px;
+        line-height: 57px;
+        @extend %dmsans-700;
+        margin-bottom: 65px;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 110px;
+    }
+    &__item {
+        width: 370px;
+        background-color: #fbfbfb;
+        padding: 70px 0 80px;
+        text-align: center;
+        svg {
+            vertical-align: middle;
+        }
+        &:hover {
+            border: 2px solid #a3bbc8;
+            .contact__item-img {
+                background-color: #a3bbc8;
+            }
+            .cls-1 {
+                fill: #fff;
+                fill-rule: evenodd;
+            }
+        }
+    }
+    &__item--active {
+        border: 2px solid #a3bbc8;
+        .contact__item-img {
+            background-color: #a3bbc8;
+        }
+        .cls-1 {
+            fill: #fff;
+            fill-rule: evenodd;
+        }
+    }
+    &__item-img {
+        width: 80px;
+        line-height: 80px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: inline-block;
+        margin-bottom: 60px;
+    }
+    &__item-title {
+        margin-bottom: 25px;
+        text-align: center;
+        color: #222222;
+        font-size: 20px;
+        line-height: 26px;
+        @extend %dmsans-700;
+    }
+    &__address-text {
+        margin: 0 auto;
+        width: 160px;
+        color: #565872;
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+    }
+    &__email-list,
+    &__phone-list {
+        color: #565872;
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+    }
+    &__email-link,
+    &__phone-link {
+        color: #565872;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form-name,
+    &__form-email {
+        width: 300px;
+        &::placeholder {
+            text-transform: uppercase;
+        }
+        background-color: #fafafa;
+    }
+    &__form {
+        &::before {
+            left: 265px;
+        }
+    }
+    &__form-textarea {
+        width: 620px;
+        text-transform: uppercase;
+        textarea {
+            &::placeholder {
+                text-transform: uppercase;
+            }
+            background-color: #fafafa;
+        }
+    }
+}
+
+#map {
+    width: 500px;
+    height: 335px;
+}
+
 @import 'media';
