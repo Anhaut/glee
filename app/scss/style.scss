@@ -30,10 +30,12 @@
 .nav-user {
     display: flex;
     &__menu {
+        display: none;
         margin-left: 20px;
         background-color: #a3bbc8;
         padding: 12px;
         border-radius: 50%;
+        border: none;
     }
     &__seach {
         background-color: #edf1f4;
