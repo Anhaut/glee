@@ -131,3 +131,10 @@ body {
     line-height: 15px;
     outline: none;
 }
+
+@media (max-width: 510px) {
+    .title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
