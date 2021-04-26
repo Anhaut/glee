@@ -79,6 +79,53 @@
             }
         }
     }
+    .about__top {
+        margin: 50px 0 50px;
+    }
+    .about-top {
+        margin-right: 20px;
+        width: 50%;
+        &__img {
+            max-width: 50%;
+            height: 50%;
+            order: 1;
+        }
+        &__descr {
+            margin-top: 0;
+        }
+        &__title {
+            margin: 30px 0;
+        }
+        &__pluses-projects,
+        &__pluses-revenue,
+        &__pluses-awards {
+            font-size: 24px;
+            line-height: 34px;
+        }
+        &__text {
+            padding-bottom: 40px;
+        }
+        &__pluses-awards {
+            padding: 10px 14px 15px 87px;
+        }
+    }
+    .team {
+        padding-top: 50px;
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__descr {
+            max-width: 100%;
+            margin-bottom: 50px;
+            margin-right: 0;
+        }
+        &__items {
+            justify-content: space-around;
+        }
+        &__item-descr {
+            margin-right: 20px;
+        }
+    }
 }
 
 @media (max-width: 1070px) {
@@ -134,6 +181,23 @@
         &__item--news {
             .blog__item-text::before {
                 top: 180px;
+            }
+        }
+    }
+    .about__top {
+        display: block;
+    }
+    .about-top {
+        width: 100%;
+        &__img {
+            display: none;
+        }
+        &__text {
+            max-width: 100%;
+        }
+        &__pluses {
+            span {
+                font-size: 14px;
             }
         }
     }
@@ -202,6 +266,9 @@
         }
     }
     .blog-bottom {
+        display: none;
+    }
+    .partners {
         display: none;
     }
 }
@@ -281,6 +348,38 @@
             text-align: center;
         }
     }
+    .terms {
+        padding-top: 50px;
+    }
+    .blog {
+        padding-top: 50px;
+    }
+    .about-bottom {
+        display: block;
+        padding: 45px 0 45px;
+        &__items+.about-bottom__items {
+            margin-top: 30px;
+        }
+        &__items-numbers {
+            margin-top: 5px;
+            span {
+                margin-top: 5px;
+            }
+        }
+        &__items::before {
+            display: none;
+        }
+        &__items::after {
+            position: absolute;
+            content: '';
+            background-color: #a3bbc8;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            top: 20px;
+            opacity: 0.7;
+        }
+    }
 }
 
 @media (max-width: 510px) {
@@ -341,6 +440,47 @@
         }
         &__items {
             max-width: 273px;
+        }
+    }
+    .terms {
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+    .about-top {
+        &__pluses {
+            display: block;
+        }
+        &__pluses-revenue,
+        &__pluses-awards {
+            border: none;
+            padding-left: 60px;
+        }
+        &__pluses-awards::before,
+        &__pluses-revenue::before {
+            left: 0;
+        }
+    }
+    .team {
+        &__photo {
+            margin-bottom: 0;
+        }
+        &__block {
+            position: static;
+            width: 100%;
+            margin-bottom: 50px;
+            justify-content: space-around;
+        }
+        &__item-cont {
+            padding: 17px 10px 17px 25px;
+        }
+        &__item-name {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__item-text {
+            font-size: 14px;
+            line-height: 22px;
         }
     }
 }
