@@ -126,6 +126,30 @@
             margin-right: 20px;
         }
     }
+    .blog-one {
+        .article__aside {
+            width: 100%;
+            order: -1;
+            .catalog-category,
+            .recent-posts {
+                display: none;
+            }
+            .article-search__input {
+                width: 100%;
+            }
+        }
+        .article__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        .article__item {
+            margin-right: 0;
+            max-width: 100%;
+        }
+        .article__item-img {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 1070px) {
@@ -297,6 +321,18 @@
             width: 100%;
         }
     }
+    .comments-form {
+        &__box-input {
+            flex-direction: column;
+        }
+        &__name-input {
+            margin-bottom: 20px;
+        }
+        &__box-input::after {
+            top: 90px;
+            left: 359px;
+        }
+    }
 }
 
 @media (max-width: 750px) {
@@ -405,6 +441,47 @@
             top: 20px;
             opacity: 0.7;
         }
+    }
+    .blog-one {
+        &__autor {
+            flex-wrap: wrap;
+        }
+        &__box {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__tags,
+        &__social {
+            justify-content: start;
+            span {
+                margin-right: 10px;
+            }
+        }
+        &__img-left {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .comments {
+        margin-right: 0;
+    }
+    .comment {
+        &__top {
+            flex-direction: column;
+            align-items: start;
+        }
+        &__top-title {
+            margin-bottom: 10px;
+        }
+        &__content {
+            border-bottom: none;
+        }
+    }
+    .comment-second {
+        margin-left: 0;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
     }
 }
 
@@ -533,6 +610,43 @@
         }
         &__item-date {
             margin-right: 28px;
+        }
+    }
+    .blog-one__text {
+        p {
+            margin: 20px 0;
+        }
+        h3 {
+            font-size: 28px;
+            line-height: 39px;
+            margin: 25px 0;
+        }
+        h4 {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 25px 0;
+        }
+        blockquote {
+            padding: 20px 40px;
+        }
+    }
+    .blog-one {
+        &__autor {
+            margin-bottom: 50px;
+        }
+    }
+    .comment__img {
+        display: none;
+    }
+    .comments-form {
+        &__name-input,
+        &__email-input {
+            width: 100%;
+        }
+        &__box-input::before,
+        &__box-input::after {
+            right: 22px;
+            left: auto;
         }
     }
 }
