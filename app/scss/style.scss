@@ -2099,7 +2099,7 @@
         }
     }
     &__form-textarea {
-        width: 620px;
+        max-width: 620px;
         text-transform: uppercase;
         textarea {
             &::placeholder {
