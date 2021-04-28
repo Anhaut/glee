@@ -90,5 +90,9 @@ $(function() {
         spacing: "14px",
     });
 
+    $('.catalog__inner-btn').on('click', function() {
+        $('.catalog__filters').slideToggle();
+    });
+
 
 });
