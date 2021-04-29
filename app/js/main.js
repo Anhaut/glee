@@ -35,7 +35,13 @@ $(function() {
         draggable: false,
         arrows: false,
         fade: true,
-        asNavFor: '.product-slide__thumb'
+        asNavFor: '.product-slide__thumb',
+        responsive: [{
+            breakpoint: 1051,
+            settings: {
+                draggable: true,
+            }
+        }, ]
     });
 
     $('.catalog-content__filter-btn').on('click', function() {
